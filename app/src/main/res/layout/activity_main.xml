@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.coderzheaven.geofencedemo.MainActivity">
+
+    <!--<android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">-->
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@+id/toolbar"
+        android:text="Add"/>
+    <TextView
+        android:id="@+id/lon"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_toRightOf="@+id/lat"
+        android:layout_below="@+id/toolbar"
+        android:text="Remove"/>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/g_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_below="@+id/toolbar"/>
+    <!--<include layout="@layout/content_main" />-->
+    <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+</RelativeLayout>
